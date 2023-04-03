@@ -1,7 +1,12 @@
-var http = require('http');
+var express= require('express');
+var app=express();
 var port=process.env.PORT;
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-console.log(port)
-  res.end('Hello World OK IT WORKSSSSS!');
-}).listen(port);
+app.get('/',function (req, res) {
+  res.header("Access-Control-Allow-Origin","*");
+
+  res.send('Hello World OK IT WORKSSSSS!');
+})
+
+app.listen(port,()=>{
+console.log("connected")
+})
