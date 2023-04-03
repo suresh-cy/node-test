@@ -12,8 +12,11 @@ var con = mysql.createConnection({
     
   });
   con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
+    if (err)
+ {
+  throw err
+ }
+    else{console.log("Connected!")};
   });
   var ss='INSERT INTO flames (name1,name2,result ) VALUES ("suresh","ram","nothing")';
   con.query(ss,function(err,result,fields){
@@ -35,5 +38,5 @@ app.get('/',function (req, res) {
 })
 
 app.listen(port,()=>{
-console.log("connected")
+console.log("connected at port")
 })
