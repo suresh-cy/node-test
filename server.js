@@ -5,10 +5,10 @@ var port=process.env.PORT;
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "id20552787_users",
-    password: "h2B4@SH>\_0tKR-h",
-    database:"id20552787_flamesinfo"
+    host: "mysql-119413-0.cloudclusters.net",
+    user: "admin",
+    password: "h82xVHw7",
+    database:"node-test"
     
   });
   con.connect(function(err) {
