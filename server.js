@@ -5,18 +5,17 @@ var port=process.env.PORT;
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-    host: "mysql-119413-0.cloudclusters.net",
+    host: "mysql-119413-db.mysql-119413",
+    port: "10072",
     user: "admin",
     password: "h82xVHw7",
     database:"node-test"
     
   });
   con.connect(function(err) {
-    if (err)
- {
-  throw err
- }
-    else{console.log("Connected!")};
+    if (err) throw err;
+ 
+    console.log("Connected!");
   });
   
 
