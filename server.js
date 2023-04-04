@@ -18,7 +18,16 @@ var con = mysql.createConnection({
  }
     else{console.log("Connected!")};
   });
-  var ss='INSERT INTO flames (name1,name2,result ) VALUES ("suresh","ram","nothing")';
+  
+
+
+
+app.get('/',function (req, res) {
+  res.header("Access-Control-Allow-Origin","*");
+
+  res.send('Hello World OK IT WORKSSSSS!');
+
+var ss='INSERT INTO flames (name1,name2,result ) VALUES ("suresh","ram","nothing")';
   con.query(ss,function(err,result,fields){
     if(err){
         console.log(err)
@@ -30,11 +39,6 @@ var con = mysql.createConnection({
 
 
 
-
-app.get('/',function (req, res) {
-  res.header("Access-Control-Allow-Origin","*");
-
-  res.send('Hello World OK IT WORKSSSSS!');
 })
 
 app.listen(port,()=>{
