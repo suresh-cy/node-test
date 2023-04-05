@@ -41,6 +41,7 @@ console.log(txt,txt2)
       con.query(ss,function(err,result,fields){
           if(err){
             console.log(err)
+            con.connect();
           }else{
             console.log(result)
               res.send(result)
