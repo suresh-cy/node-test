@@ -43,8 +43,8 @@ console.log(txt,txt2)
             console.log(err)
             con.connect();
           }else{
-            console.log(result)
-              res.send(result)
+            
+              res.send("inserted")
           }
       
       })
