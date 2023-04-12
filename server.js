@@ -35,7 +35,7 @@ console.log(name1,name2,result)
 console.log(txt,txt2)
    // if(fl!=undefined){
 
-    if(name1!=undefined && name2!=undefined && result!= undefined){
+    if( result[1]!= undefined){
         var ss='INSERT INTO flames (name1,name2,result ) VALUES ('+name1.join('')+','+name2.join('')+','+result.join('')+')';
       
       
